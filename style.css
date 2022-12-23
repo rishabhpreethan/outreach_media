@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
-    --color-white: bsl(252,30%,100%);
-    --color-light: bsl(252,30%,95%);
-    --color-gray: bsl(252,15%,65%);
-    --color-primary: bsl(252,75%,60%);
-    --color-secondary: bsl(252,100%,90%);
-    --color-success: bsl(120,95%,65%);
-    --color-danger: bsl(0,95%,65%);
-    --color-dark: bsl(252,30%,17%);
-    --color-black: bsl(252,30%,10%);
+    --color-white: hsl(252,30%,100%);
+    --color-light: hsl(252,30%,95%);
+    --color-gray: hsl(252,15%,65%);
+    --color-primary: hsl(252,75%,60%);
+    --color-secondary: hsl(252,100%,90%);
+    --color-success: hsl(120,95%,65%);
+    --color-danger: hsl(0,95%,65%);
+    --color-dark: hsl(252,30%,17%);
+    --color-black: hsl(252,30%,10%);
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;
-    --btn-padding: 0.6rem 2 rem;
+    --btn-padding: 0.6rem 2rem;
     --search-padding: 0.6rem 1rem;
     --card-padding: 1rem;
 }
@@ -31,7 +31,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--color-dark);
     background: var(--color-light);
     overflow-x:hidden;
@@ -44,7 +44,7 @@ body{
 
 .profile-photo{
     width: 2.7rem;
-    aspect-ratio:1/1;
+    aspect-ratio: 1/1;
     border-radius:50%;
     overflow:hidden;
 }
@@ -68,8 +68,54 @@ img{
     opacity:0.8;
 }
 
-.btn:primary{
+.btn-primary{
     background: var(--color-primary);
     color:white;
 }
 
+.text-bold{
+    font-weight:500;
+}
+
+.text-muted{
+    color:var(--color-gray);
+}
+
+nav{
+    width:100%;
+    background:var(--color-white);
+    padding: 0.7rem 0;
+    position:fixed;
+    top:0;
+    z-index:10;
+}
+
+nav .container{
+    display:fixed;
+    align-items:center;
+    justify-content: space-between;
+}
+
+nav .search-bar{
+    background:var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"]{
+    background:transparent;
+    width:30vw;
+    margin-left:1rem;
+    font-size:0.9rem;
+    color:var(--color-black);
+}
+
+nav .search-bar input[type="search"]::placeholder{
+    color:var(--color-gray);
+}
+
+nav .create{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
