@@ -20,6 +20,7 @@
 *,*::before,*::after{
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -81,7 +82,7 @@ nav{
     width: 100%;
     padding: 0.7rem 0;
     position: fixed;
-    top: 0;
+    top: 10;
     z-index: 10;
     background: var(--color-white);
     
@@ -102,7 +103,6 @@ nav .container{
 .search-bar input[type="search"]{
     background: transparent;
     width: 30vw;
-    margin-left: 1rem;
     font-size: 0.9rem;
     color:var(--color-black);
 }
@@ -135,7 +135,7 @@ main .container .left{
     top: var(--sticky-top-left);
 }
 
-main .container .left .profle{
+main .container .left .profile{
     padding: var(--card-padding);
     background: var(--color-white);
     border-radius: var(--card-border-radius);
@@ -143,12 +143,15 @@ main .container .left .profle{
     align-items: center;
     column-gap: 1rem;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .left .sidebar{
-    margin-top: 1 rem;
+    margin-top: 1rem;
     background: var(--color-white);
     border-radius: var(--card-border-radius);
+    height: 32rem;
+    ;
 }
 
 .left .sidebar .menu-item{
@@ -295,27 +298,28 @@ main .container .left .profle{
 }
 
 .middle .stories .story:nth-child(1){
-    background: url('images/story-1.jpg');
-    no-repeat center center/cover;
+    background: url('/Users/rahulg/Documents/pics/IMG_1E75CA40BC61-1.jpeg')
+     no-repeat center center/cover;
 }
+
 .middle .stories .story:nth-child(2){
-    background: url('images/story-2.jpg');
+    background: url('/Users/rahulg/Documents/pics/IMG_DB550346E7AE-1.jpeg') 
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(3){
-    background: url('images/story-3.jpg');
+    background: url('/Users/rahulg/Documents/pics/IMG_889D0C267F9E-1.jpeg') 
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(4){
-    background: url('images/story-4.jpg');
+    background: url('/Users/rahulg/Documents/pics/IMG_6B2B4B937594-1.jpeg')
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(5){
-    background: url('images/story-5.jpg');
+    background: url('/Users/rahulg/Documents/pics/IMG_E312C663F98B-1.jpeg')
     no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(6){
-    background: url('images/story-6.jpg');
+    background: url('/Users/rahulg/Documents/pics/IMG_97B23566AA3B-1.jpeg')
     no-repeat center center/cover;
 }
 
