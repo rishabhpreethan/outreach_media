@@ -4,6 +4,8 @@ const messagesNotification = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
+const theme = document.querySelector('#theme');
+const themeModal = document.querySelector('customize-theme')
 
 //remove active class from all menu items
 const changeActiveItem = () => {
@@ -28,6 +30,7 @@ menuItems.forEach(item => {
 })
 
 
+// -----------messages------------
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
     message.forEach(chat => {
@@ -50,3 +53,23 @@ messagesNotification.addEventListener('click', () => {
         messages.style.boxShadow = 'none';
     }, 2000);
 })
+
+// ----------------THEME CUSTOMISATION---------------
+
+// -------------opens model--------------
+const openThemeModal = () => {
+    themeModal.style.display = 'grid';
+}
+
+// ---------------closes model---------------
+const closeThemeModal = (e) => {
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display = 'none';
+    }
+
+}
+
+//---------------close model---------------
+themeModel.addEventListener('click', closeThemeModal);
+
+theme.addEventListener('click', openThemeModal);
