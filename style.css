@@ -1,14 +1,19 @@
 :root{
+--primary-color-hue: 252;
+--dark-color-lightness: 17%;
+--light-color-lightness: 95%;
+--white-color-lightness: 100%;
+
 --border-radius: 2rem;
 --card-border-radius: 1rem;
 --btn-padding: 0.6rem 2rem;
 --search-padding: 0.6rem 1rem;
 --card-padding: 1rem;
---color-white: hsl(252, 30%, 100%);
+--color-white: hsl(252, 30%, var(--white-color-lightness));
 --color-gray: hsl(252, 15%, 65%);
---color-light:hsl(252, 30%, 90%);
---color-dark: hsl(252, 30%, 17%);
---color-primary: hsl(252, 75%, 60%);
+--color-light:hsl(252, 30%, var(--light-color-lightness));
+--color-dark: hsl(252, 30%, var(--dark-color-lightness));
+--color-primary: hsl(var(--primary-color-hue), 75%, 60%);
 --color-success: hsl(120, 95%, 60%);
 --color-danger: hsl(0, 95%, 65%);
 --color-black: hsl(252, 30%, 10%);
@@ -532,7 +537,7 @@ main .container .left .profile{
 .customize-theme{
     background: rgba(255,255,255,0.5);
     width: 100vw;
-    height: 100vw;
+    height: 75vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -643,7 +648,7 @@ main .container .left .profile{
     gap: 1.5rem;
 }
 
-.customize-theme .choose-bg div{
+.customize-theme .choose-bg > div{
     padding: var(--card-padding);
     width: 100%;
     display: flex;
@@ -696,7 +701,7 @@ main .container .left .profile{
         width: 5rem;
         z-index: 5;
     }
-    .main .container .left .profile{
+    main .container .left .profile{
        display: none; 
     }
     .sidebar h3{
